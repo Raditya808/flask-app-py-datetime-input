@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link href="{{ url_for('static', filename='about.css') }}" rel="stylesheet" />
+  </head>
+  <body class="about">
+
+    <div class="source-card">
+        <h1>Source Dev</h1>
+        <a href="https://github.com/Raditya808">Source</a> 
+
+        <h2>Source Date Times Codes</h2>
+        <a href="https://github.com/Raditya808/aku-belajar-Python-/tree/master/20.Date%20and%20time">Date And Time Source</a>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <button>
+            <a href="{{url_for('index')}}">Kembali ke Halaman Utama</a>
+        </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Date time</title>
+    <!--<link href="static/index.css" rel="stylesheet" />-->
+    <!-- Untuk project flas yang serius dan aman gunakan syntax bawah jika ingin belajar doang pake atas boleh-->
+    <link rel="stylesheet" href="{{url_for('static',filename="index.css")}}">
+  </head>
+  <body>
+    <h1>PYTHON DATETIME BERBASIS FLASK APP</h1>
+    <hr>
+    <p>Power By</p>
+    <img src="{{ url_for('static', filename='flask.png') }}" height="100" width="500">
+    <p>Tanggal Sekarang Adalah</p>
+    <p>{{waktu}}</p>
+
+    <button>
+      <a href="{{url_for('index2')}}">Hitung Jarak Tanggal Lahir Anda Dengan Hari Ini</a>
+    </button>
+    
+    <button>
+      <a href="{{url_for('index3')}}">Cek Berapa Umur Anda</a>
+    </button>
+    <button>
+    <a href="{{url_for('index4')}}">Source Code</a>
+    </button>
+  </body>
+</html>

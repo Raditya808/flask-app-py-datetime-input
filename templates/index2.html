@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Porgram Input Jarak Tanggal Lahir</title>
+    <!--<link href="static/index2.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="{{url_for('static',filename="index2.css")}}">
+  </head>
+  <body>
+    <h1>PYTHON INPUT JARAK UMUR DENGAN SYNTAX DATETIME BERBASIS FLASK APP</h1>
+    <hr>
+    <h2>Program Mengecek Jarak Tanggal Lahir Dan Tanggal Sekarang Power By</h2>
+    <img src="{{ url_for('static', filename='flask.png') }}" height="100" width="500">
+    <form method="POST">
+      Masukan Tahun<input type="number" name="tahun" /><br />
+      Masukan Bulan<input type="number" name="bulan" /><br />
+      Masukan Hari<input  type="number" name="hari"/><br>
+      <input type="submit" name="data_lahir" value="Kirim"/><br>
+      <hr>
+      {% if data_lahir %}
+      <p>Tanggal Lahir Anda Adalah {{data_lahir}}</p>
+      {% if dtful %} 
+      <p>Hari Ini Adalah Tanggal {{flldata}}</p>
+      <p>Jarak Antara Tanggal Lahir Anda Dan Tanggal Sekarang Adalah {{dtful}}</p>
+      {% endif %} 
+      {% endif %}
+    <hr>
+    <p>Ingin Cek Tanggal Hari Ini ?</p>
+    <button>
+        <a href="{{url_for('index')}}">Cek Tanggal Berapa Hari Ini</a>
+      </button>
+      <p>Atau Cek Berapa Umur Anda</p>
+      <button>
+         <a href="{{url_for('index3')}}">Cek Berapa Umur Anda</a>
+      </button>
+    </form>
+  </body>
+</html>

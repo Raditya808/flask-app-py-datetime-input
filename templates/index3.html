@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Program Input Umur</title>
+        <!--<link href="static/index3.css" rel="stylesheet" />-->
+        <!--untuk case flask serius pake syntax url_for-->
+        <link rel="stylesheet" href="{{url_for('static', filename='index3.css')}}">
+    </head>
+    <body>
+    <h1>PYTHON MENGECEK UMUR DENGAN SYNTAX DATETIME BERBASIS FLASK APP</h1>
+    <hr>
+    <p>Mengecek Berapa Umur Anda Power By</p>
+    <img src="{{ url_for('static', filename='flask.png') }}" height="100" width="500">
+     <p>Sekarang Tanggal {{hari_ini}}</p>
+      <form method="POST">
+      Masukan Tahun<input type="number" name="tahun" /><br />
+      Masukan Bulan<input type="number" name="bulan" /><br />
+      Masukan Hari<input  type="number" name="hari"/><br>
+      <input type="submit" name="data_lahir" value="Kirim"/><br>
+      <hr>
+      {% if data_lahir %}
+      <p>Tanggal Lahir Anda Adalah {{data_lahir}}</p>
+      {% if umur_lu %} 
+        <p>Umur Anda Sekarang Adalah {{umur_lu}}</p>
+      {% endif %} 
+      {% endif %}
+    <hr>
+    <p>Ingin Cek Tanggal Hari Ini ?</p>
+    <button>
+        <a href="{{url_for('index')}}">Cek Tanggal Berapa Hari Ini</a>
+      </button> 
+      <p>Atau Cek Jarak Umur Anda</p>
+      <button>
+        <a href="{{url_for("index2")}}">Cek Jarak Tanggal Lahir Anda Dengan Hari Ini</a>
+      </button>
+    </form>
+    </body>     
+</html>
