@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hasil Perhitungan Umur</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='index3.css')}}">
+    </head>
+    <body>
+    <h1>Hasil Perhitungan Umur</h1>
+
+
+    <hr>
+      <!-- Menerima parameter variabel dari rute hasil_umur
+          yang menggunakan request.args.get('full_data') dan 
+          request.args.get('umur_lu') memanggil di syntax rute 
+          index 3 
+          lalu di return ke template html di hasil_umur.html untuk hasil nya
+          dengan membuat variabel dan di panggil variabel rute dari hasil_umur 
+          dan membuat variabel yang sama dan memanggil kedua variabel bernama 
+          full_data dan umur_lu  untuk di return di kode html ini
+              
+      
+      -->
+    {% if  full_data%} <!-- memanggil parameter full_data-->
+    <p>Tanggal Lahir Anda Adalah {{full_data}}</p> <!-- Menampilkan parameter full_data di rute /hasil umur-->
+    {% if umur_lu %} <!-- memanggil parameter umur_lu-->
+    <p>Umur Anda Adalah {{ umur_lu }}</p> <!-- menampilkan parameter umur_lu di rute /hasil umur-->
+    {% endif %}
+    {% endif%}
+    <hr>
+    <button><a href="{{url_for('index3')}}">Kembali ke Input Umur</a></button>
+    <button><a href="{{url_for('index')}}">Kembali ke Halaman Utama</a></button>
+    </body>     
+</html>

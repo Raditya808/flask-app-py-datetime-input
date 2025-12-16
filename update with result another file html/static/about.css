@@ -1,0 +1,116 @@
+:root {
+    --clr-light-gray: #f7f7f7;
+    --clr-dark-text: #333;
+    --clr-box-shadow: rgba(0, 0, 0, 0.1);
+    --clr-primary-btn: #2c3e50; 
+    --clr-primary-btn-hover: blueviolet; 
+    --clr-content-bg: #ffffff;
+    --animation-duration: 1s;
+}
+
+body {
+    background-color: var(--clr-light-gray); 
+    color: var(--clr-dark-text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* KONTENER BERGAYA CARD */
+.source-card {
+    background-color: var(--clr-content-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--clr-box-shadow);
+    max-width: 500px; 
+    width: 90%;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeInUp var(--animation-duration) ease-out 0.8s forwards;
+}
+
+h1 {
+    color: var(--clr-primary-btn);
+    animation: none; 
+    opacity: 1; 
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #666;
+    font-weight: normal; 
+    font-size: 1.1em; 
+    margin-top: 25px;
+    margin-bottom: 10px;
+    animation: none;
+    opacity: 1;
+}
+
+.source-card a {
+    color: var(--clr-primary-btn);
+    text-decoration: none; 
+    font-size: 1em; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: 1px solid var(--clr-primary-btn);
+    border-radius: 5px;
+    background-color: transparent;
+    opacity: 1;
+    animation: none;
+}
+
+.source-card a:hover {
+    color: white; 
+    background-color: var(--clr-primary-btn-hover);
+    border-color: var(--clr-primary-btn-hover);
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+button a {
+    text-decoration: none;
+    background-color: var(--clr-primary-btn); 
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover a {
+    background-color: var(--clr-primary-btn-hover); 
+    transform: scale(1.03);
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}

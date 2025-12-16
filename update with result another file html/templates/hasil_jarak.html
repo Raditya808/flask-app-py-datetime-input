@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hasil Jarak Tanggal</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='index2.css')}}">
+  </head>
+  <body>
+    <h1>Hasil Perhitungan Jarak Tanggal</h1>
+    <hr>
+    <!-- Mengirim parameter dari file python /hasil jarak 
+    dari parameter 
+    - data_lahir = data_lahir 
+    - dtful = dtful 
+    - flldata = flldata 
+    yang nantinya di kirim di file html ini 
+    -->
+    {% if data_lahir%}
+    <p>Tanggal Lahir anda Adalah {{data_lahir}}</p>
+    {% if dtful %}
+    <p>Jarak Antara Tanggal Lahir Dan Tanggal Sekarang Adalah {{dtful}}</p>
+    {% else %}
+    <p>Tidak Valid Input Angka Kembali!</p>
+    {% endif%}
+    {% endif%}
+    <hr>
+    <button><a href="{{url_for('index2')}}">Kembali ke Input Jarak Tanggal</a></button>
+    <button><a href="{{url_for('index')}}">Kembali ke Halaman Utama</a></button>
+  </body>
+</html>
