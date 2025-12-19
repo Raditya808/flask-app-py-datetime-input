@@ -1,11 +1,33 @@
-## A simple flask app date time input 
+## A Simple Flask App To Calculate Your Date Of Birth And Calculate The Distance Between Today And Your Birth Date
 <p align="center">
   <img src="assets/flask2.png" alt="Flask Logo" width="800px"/>
 </p>
 
+
+## 📂 Project Structure
+```bash
+├── assets/
+│   └── flask.png                     
+├── static/                
+│   │   ├── about.css
+│   │   └── index.js
+│   │   └── flask.png
+│   │   └── index.css
+│   │   └── index2.css
+│   │   └── index3.css
+├── templates/
+│   │   ├── about.html
+│   │   ├── index.html
+│   │   ├── index2.html
+│   │   ├── index3.html
+│   │       
+└── main.py -- to run           
+
+```
 # Flask DateTime Input Example
 
-A small example Flask application demonstrating how to collect and handle date/time input from a user via an HTML form. This repository contains a minimal Flask app (main.py), templates, static assets, and example front-end components for datetime input.
+A simple application to calculate the distance between today's date and your birth date and calculate your age using Flask based on the Python language.
+and can automatically update today's date, suitable for hosting
 
 ## Features
 
