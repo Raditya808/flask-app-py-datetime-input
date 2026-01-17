@@ -14,7 +14,7 @@ def index():
             <title>Menu Awal</title>
          </head>
         <body>
-            <div class="waktu_sekrang">
+            <div class="waktu_sekarang">
             <h1>Flask Import Datetime</h1>
             <p>Tanggal Sekarang {waktu_sekrang}</p>
             </div>
