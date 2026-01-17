@@ -8,7 +8,6 @@
   <body>
     <h1>HASIL JARAK UMUR SETELAH INPUT</h1>
     <hr>
-    <!-- menerima hasil dari parameter full_data dari function hasil_jarak-->
       {% if full_data %}
       <p>Tanggal Lahir Anda Adalah {{full_data}}</p>
       {% if selisih_waktu %}
@@ -17,14 +16,18 @@
       {% endif %}
     <hr>
 
+    <section class="waktu_sekrang">
     <p>Kembali Ke Menu Awal?</p>
     <button>
-        <a href="{{url_for('index')}}">Kembali Ke Menu Awal</a>
+        <a href="{{url_for('index')}}">Ke Menu Awal</a>
       </button>
+    </section>
+      
+    <section class="index3_umur">
       <p>Atau Cek Berapa Umur Anda</p>
       <button>
          <a href="{{url_for('index3')}}">Cek Berapa Umur Anda</a>
       </button>
-    </form>
+      </section>
   </body>
 </html>
