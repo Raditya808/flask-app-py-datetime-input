@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-    <link href="{{ url_for('static', filename='about.css') }}" rel="stylesheet" />
-  </head>
-  <body class="about">
 
-    <div class="source-card">
-        <h1>Source Dev</h1>
-        <a href="https://github.com/Raditya808">Source</a> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link href="{{ url_for('static', filename='about.css') }}" rel="stylesheet" />
+</head>
 
-        <h2>Source Date Times Codes</h2>
-        <a href="https://github.com/Raditya808/aku-belajar-Python-/tree/master/20.Date%20and%20time">Date And Time Source</a>
-    </div>
-    
-    <div style="margin-top: 30px;">
-        <button>
-            <a href="{{url_for('index')}}">Kembali ke Halaman Utama</a>
-        </button>
-    </div>
-  </body>
+<body class="about">
+
+  <div class="source_git">
+    <h2>Source Dev</h2>
+    <a href="https://github.com/Raditya808">Source</a>
+
+    <h2>Source Code Raditya</h2>
+    <a href="https://github.com/Raditya808/aku-belajar-Python-/tree/master/20.Date%20and%20time">Date And Time
+      Source</a>
+
+    <h2>Source Code Kelas Terbuka</h2>
+    <a
+      href="https://github.com/kelasterbuka/Python3.x_Dasar_Programming/tree/master/Episode%2020%20-%20Date%20and%20Time%20(Latihan)">
+      Date And Time Kelas Terbuka Repo</a>
+  </div>
+  <br>
+
+  <div class="waktu_sekarang">
+    <h3>Kembali Ke Menu Awal</h3>
+    <button>
+      <a href="{{url_for('index')}}">Menu Awal</a>
+    </button>
+  </div>
+</body>
+
 </html>
